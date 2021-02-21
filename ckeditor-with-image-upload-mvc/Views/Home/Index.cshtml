@@ -1,0 +1,32 @@
+﻿@model List<ckeditor_with_image_upload_mvc.Models.Articles>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>CKEditor With Image Upload in MVC</h2>
+    <p class="lead">Example of CKEditor with Image Upload to Database in MVC.</p>
+</div>
+
+<div class="row">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Article Id</td>
+                <td>Article Title</td>
+                <td>Article Content</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var article in Model)
+            {
+                <tr>
+                    <td>@article.Article_Id</td>
+                    <td>@article.Article_Title</td>
+                    <td>@Html.Raw(article.Article_Content)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

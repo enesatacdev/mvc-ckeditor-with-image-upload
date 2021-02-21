@@ -1,0 +1,45 @@
+﻿@model ckeditor_with_image_upload_mvc.Models.Articles
+@{
+    ViewBag.Title = "AddArticle";
+}
+
+<div class="col-12 col-lg-12">
+    <div class="card radius-15 border-lg-top-white">
+        <div class="card-body p-5">
+            <div class="card-title d-flex align-items-center">
+                <div>
+                    <i class="bx bxs-task mr-1 font-24 text-white"></i>
+                </div>
+                <h4 class="mb-0 text-white">Add Article</h4>
+            </div>
+            <hr>
+            <div class="form-body">
+                @using (Html.BeginForm("AddArticle", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Article Title</label>
+                            @Html.TextBoxFor(m => m.Article_Title, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label>Article Id</label>
+                            @Html.TextBoxFor(m => m.Article_Id, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+
+                        <div class="form-group">
+                            <label>Article Content</label>
+                            @Html.TextAreaFor(m => m.Article_Content, new { @class = "ckeditor" })
+                        </div>
+                       
+                        <button type="submit" class="btn btn-light px-5 radius-30 mt-3">Add Article</button>
+                    </div>
+
+                }
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

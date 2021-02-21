@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CKEditorExampleModelStoreContainer" CdmEntityContainer="CKEditorExampleEntities">
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="CKEditorExampleModel.Articles">
+        <MappingFragment StoreEntitySet="Articles">
+          <ScalarProperty Name="Article_Id" ColumnName="Article_Id" />
+          <ScalarProperty Name="Article_Title" ColumnName="Article_Title" />
+          <ScalarProperty Name="Article_Content" ColumnName="Article_Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
